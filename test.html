@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アコーディオン機能</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* 全体のレイアウト */
+    .accordion-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .left-box, .right-box {
+      border: 1px solid #ddd;
+      padding: 20px;
+      width: 360px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 左側ボックス */
+    .left-box {
+      text-align: center;
+    }
+
+    .left-box p {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background-color: #a44b26; /* ボタンの色 */
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #80381f; /* ホバー時の色 */
+    }
+
+    /* 右側ボックス */
+    .right-box {
+      position: relative;
+    }
+
+    .accordion-content {
+      display: none; /* 初期状態は非表示 */
+      margin-top: 10px;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .accordion-content.open {
+      display: block; /* 開くと表示 */
+    }
+
+    .accordion-content p {
+      margin: 10px 0;
+    }
+
+    .accordion-content p strong {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="accordion-container">
+    <!-- 左側のボックス -->
+    <div class="left-box">
+      <p>参加した先輩の意見を読む</p>
+      <button class="button" id="toggle-button">意見を見る</button>
+    </div>
+
+    <!-- 右側のボックス -->
+    <div class="right-box">
+      <div class="accordion-content" id="accordion">
+        <p><strong>Q:</strong> このセミナーで一番役に立った部分は？</p>
+        <p>セミナー全体を通じて構造的に学べた点が非常に有益でした。</p>
+
+        <p><strong>Q:</strong> その成果は実際に役立ちましたか？</p>
+        <p>非常に実務的で役に立つ内容が多く、理解を深める大きな助けとなりました。</p>
+
+        <p><strong>Q:</strong> 最後にメッセージをお願いします。</p>
+        <p>このセミナーを通じて新しい視点を得られました。参加して本当に良かったです。</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // アコーディオンの開閉機能
+    document.getElementById('toggle-button').addEventListener('click', function () {
+      const accordion = document.getElementById('accordion');
+      accordion.classList.toggle('open'); // openクラスの切り替え
+    });
+  </script>
+</body>
+</html>

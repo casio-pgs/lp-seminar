@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+
+html {
+  font-size: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: '小塚ゴシック Pro', "YuGothic", "Yu Gothic Medium", "游ゴシック Medium", "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  color: #333;
+  color: #333333;
+  width: 750px;
+  max-width: 100%;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+div img {
+  vertical-align: top;
+}
+
+.center {
+  text-align: center !important;
+}
+
+
+
+.btn1 {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.box8 img, .box9 img, .box10 img, .box11 img, .box12 img, .box13 img, .box13-1 img, .box14 img {
+  display: block !important;
+}
+
+.btn2 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.btn2 img {
+  margin: 0 auto;
+}
+
+.btn3 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.btn3 img {
+  margin: 0 auto;
+}
+
+.btn4 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.btn4 img {
+  margin: 0 auto;
+}
+
+.btn5 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.btn5 img {
+  margin: 0 auto;
+}
+
+/* TEL */
+
+.tel_btn img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 地図 */
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 0;
+  padding-bottom: 1em;
+}
+
+
+.map {
+  text-align: center;
+  padding-top: 1em;
+  font-size: 1.4em;
+  padding-bottom: 1em;
+  letter-spacing: 0.1em;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.box1 {
+  position: relative;
+}
+
+/* 動画 */
+.youtube_move iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  padding: 0 10px;
+}
+
+.youtube_move {
+  margin-bottom: 1em;
+}
+
+.youtube_move.last {
+  margin-bottom: 3em;
+}
+
+
+/* ボタン動き */
+
+.move {
+  animation-name: btn_move;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+
+@keyframes btn_move {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, -15px)
+  }
+}
+
+
+/* フッター */
+
+.footer-p {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  font-size: 20px;
+}
+
+
+footer {
+  background-color: #de3f04;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 3;
+}
+
+footer p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* 追従ボタン */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+
+.fixed .btn_fix {
+  display: inline-block;
+  width: 100%;
+}
+
+.btn_fix img {
+  max-width: 425px;
+}
+
+
+
+@media print,
+screen and (min-width: 768px) {
+  body .fixed {
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) {
+
+
+  .content {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .top-btn {
+    width: 35%;
+  }
+
+
+  .btn1 a {
+    width: 91%;
+    margin: 0 auto;
+  }
+
+  .btn2 a {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .btn3 a {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .btn4 a {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .btn5 a {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+
+  footer {
+    max-width: 100%;
+    font-size: 0.4rem;
+    height: 100px;
+  }
+
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+  }
+
+  .comment {
+    font-size: 0.5em;
+  }
+
+  .map {
+    padding-top: 0.5em;
+    font-size: 16px;
+    padding-bottom: 0;
+    letter-spacing: 0.05em;
+  }
+
+  iframe {
+    height: 280px;
+    width: 95%;
+  }
+
+  .btn_fix img {
+    width: 100%;
+  }
+
+  .footer-p {
+    font-size: 13px;
+  }
+
+  .copy p {
+    font-size: 0.7rem;
+  }
+}
